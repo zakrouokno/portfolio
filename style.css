@@ -1,222 +1,443 @@
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
+
+
 
 body {
+
     font-family: 'Segoe UI', Arial, sans-serif;
+
     background-color: #0a0a0a;
+
     color: #e0e0e0;
+
     line-height: 1.6;
+
 }
+
+
 
 /* Навигация */
+
 nav {
+
     position: fixed;
+
     top: 0;
+
     width: 100%;
+
     background-color: rgba(10, 10, 10, 0.95);
+
     backdrop-filter: blur(12px);
+
     z-index: 100;
+
     border-bottom: 1px solid #222;
+
 }
+
+
 
 .nav-container {
+
     max-width: 1100px;
+
     margin: 0 auto;
+
     padding: 20px 40px;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
 }
+
+
 
 .logo {
+
     font-size: 26px;
+
     font-weight: 700;
+
     color: #ffd700;           /* золото */
+
 }
+
+
 
 .nav-links a {
+
     margin-left: 35px;
+
     text-decoration: none;
+
     color: #ccc;
+
     font-weight: 500;
+
     transition: color 0.3s;
+
 }
+
+
 
 .nav-links a:hover {
+
     color: #ffd700;
+
 }
+
+
 
 /* Hero секция */
+
 .hero {
+
     height: 100vh;
+
     min-height: 680px;
+
     background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     text-align: center;
+
     padding: 0 20px;
+
     position: relative;
+
     overflow: hidden;
+
 }
+
+
 
 .hero::before {
+
     content: '';
+
     position: absolute;
+
     top: 0;
+
     left: 0;
+
     right: 0;
+
     bottom: 0;
+
     background: radial-gradient(circle at center, rgba(255, 215, 0, 0.08), transparent 70%);
+
 }
+
+
 
 .hero-content {
+
     max-width: 820px;
+
     z-index: 2;
+
 }
 
+
+
 .hero h1 {
+
     font-size: 72px;
+
     font-weight: 700;
+
     margin-bottom: 24px;
+
     color: #ffd700;
+
     text-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+
 }
+
+
 
 .subtitle {
+
     font-size: 28px;
+
     margin-bottom: 50px;
+
     color: #bbbbbb;
+
     font-weight: 400;
+
 }
+
+
 
 .cta-button {
+
     padding: 18px 52px;
+
     font-size: 21px;
+
     background-color: transparent;
+
     color: #ffd700;
+
     border: 2px solid #ffd700;
+
     border-radius: 50px;
+
     font-weight: 600;
+
     cursor: pointer;
+
     transition: all 0.4s;
+
 }
+
+
 
 .cta-button:hover {
+
     background-color: #ffd700;
+
     color: #0a0a0a;
+
     transform: translateY(-5px);
+
 }
+
+
 
 /* Секции */
+
 section {
+
     padding: 120px 40px;
+
     max-width: 1100px;
+
     margin: 0 auto;
+
 }
+
+
 
 h2 {
+
     font-size: 48px;
+
     text-align: center;
+
     margin-bottom: 60px;
+
     color: #ffd700;
+
 }
+
+
 
 /* Обо мне */
+
 .about p {
+
     font-size: 22px;
+
     max-width: 720px;
+
     margin: 0 auto;
+
     text-align: center;
+
     color: #aaaaaa;
+
 }
+
+
 
 /* Навыки */
+
 .skills-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
     gap: 30px;
+
 }
+
+
 
 .skill-card {
+
   background: #111;
+
   padding: 30px;
+
   border-radius: 20px;
+
   transition: all 0.3s ease;
+
   border: 1px solid rgba(255, 215, 0, 0.1);
+
 }
+
+
 
 .skill-card:hover {
+
   transform: translateY(-10px) scale(1.02);
+
   box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+
   border: 1px solid rgba(255, 215, 0, 0.4);
+
 };
+
 }
+
+
 
 .skill-card h3 {
+
     font-size: 30px;
+
     margin-bottom: 18px;
+
     color: #ffd700;
+
 }
+
+
 
 .skill-card p {
+
     color: #999;
+
 }
+
+
 
 /* Footer */
+
 footer {
+
     background-color: #050505;
+
     text-align: center;
+
     padding: 100px 20px;
+
     border-top: 1px solid #222;
+
 }
+
+
 
 footer p {
+
     font-size: 22px;
+
     margin-bottom: 35px;
+
     color: #ccc;
+
 }
+
+
 
 /* Адаптив */
+
 @media (max-width: 768px) {
+
     .hero h1 { font-size: 54px; }
+
     .subtitle { font-size: 23px; }
+
     .nav-container { padding: 16px 20px; }
+
     .nav-links a { margin-left: 20px; font-size: 16px; }
+
     section { padding: 80px 20px; }
+
     h2 { font-size: 38px; }
+
 }
+
 .hero h1 {
+
   opacity: 0;
+
   transform: translateY(20px);
+
   animation: fadeUp 1s ease forwards;
+
 }
+
 .hero h1 {
+
   opacity: 0;
+
   transform: translateY(30px);
+
   animation: fadeUp 1s ease forwards;
+
 }
+
+
 
 .hero p {
+
   opacity: 0;
+
   transform: translateY(30px);
+
   animation: fadeUp 1s ease forwards;
+
   animation-delay: 0.3s;
+
 }
+
+
 
 .btn {
+
   opacity: 0;
+
   transform: translateY(30px);
+
   animation: fadeUp 1s ease forwards;
+
   animation-delay: 0.6s;
+
 }
 
+
+
 @keyframes fadeUp {
+
   to {
+
     opacity: 1;
+
     transform: translateY(0);
+
   }
+
 }
