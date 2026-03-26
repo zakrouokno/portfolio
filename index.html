@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Андрей — UI/UX Дизайнер</title>
+    <title>Андрей — UI/UX Дизайнер & Web Developer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <div class="nav-container">
-            <h2 class="logo">sydorovweb</h2>
+            <a href="index.html" class="logo-link">
+    <h2 class="logo">sydorovweb</h2>
+</a>
             <div class="nav-links">
                 <a href="#about">Обо мне</a>
                 <a href="#skills">Навыки</a>
@@ -21,41 +24,44 @@
     <header class="hero">
         <div class="hero-content">
             <h1>Привет, я Андрей</h1>
-            <p class="subtitle">Создаю современные и удобные интерфейсы,
-которые решают задачи бизнеса и пользователей.</p>
-            <button class="cta-button">Посмотреть работы</button>
+            <p class="subtitle">Создаю современные и удобные интерфейсы, которые решают задачи бизнеса и радуют пользователей.</p>
+            <a href="#skills" class="cta-button">Посмотреть навыки</a>
         </div>
     </header>
 
-    <section id="about" class="about">
-        <h2>Обо мне</h2>
-        <p>Я только начинаю путь в веб-дизайне. Учусь каждый день по 2–4 часа, работаю в Figma и уже умею верстать красивые сайты на HTML + CSS. Хочу создавать интерфейсы, которыми приятно пользоваться.</p>
-    </section>
+    <main>
+        <section id="about" class="about">
+            <h2>Обо мне</h2>
+            <p>Я начинающий UI/UX дизайнер с навыками фронтенд-разработки. Моя цель — соединить эстетику дизайна с чистотой кода. Работаю в <strong>Figma</strong> и верстаю на <strong>HTML & CSS</strong>, постоянно изучая новые инструменты для создания лучшего пользовательского опыта.</p>
+        </section>
 
-    <section id="skills" class="skills">
-        <h2>Что я изучаю</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Figma</h3>
-                <p>UI/UX дизайн, прототипы, компоненты</p>
+        <section id="skills" class="skills">
+            <h2>Что я изучаю</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>🎨 Figma</h3>
+                    <p>Проектирование интерфейсов, создание прототипов, работа с компонентами и дизайн-системами.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>💻 Web Dev</h3>
+                    <p>Семантическая верстка (HTML5), стилизация (CSS3), использование Flexbox и Grid для адаптивности.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>📱 UX Research</h3>
+                    <p>Анализ пользовательского пути, создание удобной навигации и логики взаимодействия.</p>
+                </div>
             </div>
-            <div class="skill-card">
-                <h3>HTML + CSS</h3>
-                <p>Семантическая верстка, Flexbox, Grid, анимации</p>
-            </div>
-            <div class="skill-card">
-                <h3>Дизайн-системы</h3>
-                <p>Цвета, типографика, отступы, адаптив</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer id="contact">
-        <p>Готов учиться и брать первые простые проекты</p>
-        <a href="https://t.me/artandrew1" class="cta-button" target="_blank">
-    Написать мне в Telegram
-</a>
+        <h2>Свяжитесь со мной</h2>
+        <p>Готов к сотрудничеству в учебных или первых коммерческих проектах.</p>
+        <div class="footer-buttons">
+            <a href="https://t.me/artandrew1" class="cta-button" target="_blank">Написать в Telegram</a>
+        </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
