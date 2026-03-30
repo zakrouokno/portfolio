@@ -17,15 +17,18 @@
     /* Мобильные улучшения */
     @media (max-width: 768px) {
       .heading {
-        font-size: 2.75rem !important;
+        font-size: 2.6rem !important;
         line-height: 1.1;
       }
       h1 {
-        font-size: 2.7rem !important;
+        font-size: 2.55rem !important;
       }
       section {
-        padding-top: 3.5rem !important;
-        padding-bottom: 3.5rem !important;
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+      }
+      .text-2xl {
+        font-size: 1.6rem !important;
       }
     }
   </style>
@@ -53,7 +56,7 @@
     </div>
   </nav>
 
-  <!-- Hero - компактная версия -->
+  <!-- Hero -->
   <section class="min-h-screen flex items-center justify-center pt-16 bg-zinc-50">
     <div class="max-w-5xl mx-auto px-5 text-center">
       <h1 class="heading text-5xl md:text-6xl lg:text-7xl font-bold leading-none mb-6 text-zinc-900">
@@ -111,7 +114,18 @@
               Полноценный одностраничный сайт с тёмным мужским дизайном, анимациями, формой записи и интеграцией с Telegram-ботом.
             </p>
 
-            <div class="flex gap-3">
+            <div class="mt-6">
+              <span class="text-sm text-zinc-500">Технологии:</span>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="bg-zinc-100 px-4 py-1.5 rounded-xl text-sm">HTML5</span>
+                <span class="bg-zinc-100 px-4 py-1.5 rounded-xl text-sm">Tailwind CSS</span>
+                <span class="bg-zinc-100 px-4 py-1.5 rounded-xl text-sm">JavaScript</span>
+                <span class="bg-zinc-100 px-4 py-1.5 rounded-xl text-sm">AOS Animations</span>
+                <span class="bg-zinc-100 px-4 py-1.5 rounded-xl text-sm">Telegram API</span>
+              </div>
+            </div>
+
+            <div class="mt-10 flex gap-3">
               <a href="https://zakrouokno.github.io/sydorofclub/" target="_blank"
                  class="flex-1 bg-zinc-900 hover:bg-black text-white py-4 rounded-2xl text-center text-sm font-medium transition-all">
                 Посмотреть сайт
@@ -124,7 +138,7 @@
           </div>
         </div>
 
-        <!-- Заглушка для следующего проекта -->
+        <!-- Заглушка -->
         <div class="bg-white rounded-3xl overflow-hidden border border-dashed border-zinc-300 flex flex-col items-center justify-center py-20 text-center hover:border-zinc-400 transition-all group">
           <div class="w-16 h-16 bg-zinc-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
             <span class="text-3xl">🚀</span>
@@ -162,30 +176,6 @@
           Ищу интересные проекты, где смогу применить свои навыки и продолжить расти как специалист.
         </p>
       </div>
-
-      <div class="mt-20 max-w-3xl mx-auto">
-        <h3 class="text-2xl font-semibold text-center mb-10">Что я использую</h3>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-          <div class="bg-white border border-zinc-100 rounded-2xl p-6 text-center hover:border-amber-200 transition-colors">
-            <p class="font-medium">Tailwind CSS</p>
-          </div>
-          <div class="bg-white border border-zinc-100 rounded-2xl p-6 text-center hover:border-amber-200 transition-colors">
-            <p class="font-medium">JavaScript</p>
-          </div>
-          <div class="bg-white border border-zinc-100 rounded-2xl p-6 text-center hover:border-amber-200 transition-colors">
-            <p class="font-medium">HTML5 + CSS3</p>
-          </div>
-          <div class="bg-white border border-zinc-100 rounded-2xl p-6 text-center hover:border-amber-200 transition-colors">
-            <p class="font-medium">Анимации</p>
-          </div>
-          <div class="bg-white border border-zinc-100 rounded-2xl p-6 text-center hover:border-amber-200 transition-colors">
-            <p class="font-medium">Responsive Design</p>
-          </div>
-          <div class="bg-white border border-zinc-100 rounded-2xl p-6 text-center hover:border-amber-200 transition-colors">
-            <p class="font-medium">Telegram API</p>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -217,7 +207,7 @@
       </div>
 
       <div class="mt-20 text-xs text-zinc-400">
-        © 2026 zakrouokno • Сделано с душой
+        © 2026 Андрей Сидоров • Сделано с душой
       </div>
     </div>
   </section>
