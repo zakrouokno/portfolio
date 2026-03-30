@@ -6,7 +6,7 @@
   <title>Андрей Сидоров | Front-end Developer</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-   <style>
+  <style>
     body { 
       font-family: 'Inter', system-ui, sans-serif; 
     }
@@ -14,46 +14,25 @@
       font-family: 'Playfair Display', serif; 
     }
 
-    /* ====================== МОБИЛЬНЫЕ УЛУЧШЕНИЯ ====================== */
+    /* Мобильные улучшения */
     @media (max-width: 768px) {
       .heading {
-        font-size: 2.8rem !important;
+        font-size: 2.75rem !important;
         line-height: 1.1;
       }
-      
       h1 {
-        font-size: 2.75rem !important;
+        font-size: 2.7rem !important;
       }
-
       section {
-        padding-top: 4rem !important;
-        padding-bottom: 4rem !important;
-      }
-
-      .text-3xl {
-        font-size: 1.75rem !important;
-      }
-
-      .text-xl {
-        font-size: 1.15rem !important;
-      }
-
-      /* Улучшение кнопок на мобильных */
-      a {
-        padding: 1rem 1.5rem !important;
-        font-size: 1.05rem !important;
-      }
-
-      /* Навбар на мобильных */
-      nav {
-        padding: 1rem 1.25rem !important;
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
       }
     }
   </style>
 </head>
 <body class="bg-zinc-50 text-zinc-900">
 
-   <!-- Навбар -->
+  <!-- Навбар -->
   <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-zinc-100">
     <div class="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
@@ -74,8 +53,8 @@
     </div>
   </nav>
 
-     <!-- Hero - улучшенная мобильная версия -->
-  <section class="min-h-screen flex items-center justify-center pt-16 bg-zinc-50 relative">
+  <!-- Hero - компактная версия -->
+  <section class="min-h-screen flex items-center justify-center pt-16 bg-zinc-50">
     <div class="max-w-5xl mx-auto px-5 text-center">
       <h1 class="heading text-5xl md:text-6xl lg:text-7xl font-bold leading-none mb-6 text-zinc-900">
         Андрей Сидоров
@@ -85,7 +64,7 @@
         Front-end Developer
       </p>
 
-      <p class="text-base md:text-lg text-zinc-600 max-w-xl mx-auto mb-12 px-4">
+      <p class="text-base md:text-lg text-zinc-600 max-w-xl mx-auto mb-12 px-4 leading-relaxed">
         Создаю чистые, быстрые и красивые веб-сайты.<br class="hidden md:block">
         С вниманием к деталям и удобству пользователя.
       </p>
@@ -103,21 +82,7 @@
     </div>
   </section>
 
-      <!-- Социальные ссылки -->
-      <div class="mt-16 flex justify-center gap-8 text-zinc-400">
-        <a href="https://t.me/artandrew1" target="_blank" class="hover:text-amber-600 transition-colors">Telegram</a>
-        <a href="https://github.com/zakrouokno" target="_blank" class="hover:text-amber-600 transition-colors">GitHub</a>
-      </div>
-    </div>
-
-    <!-- Плавный индикатор прокрутки -->
-    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center">
-      <span class="text-xs tracking-[2px] text-zinc-400 mb-3">ПРОКРУТИТЬ</span>
-      <div class="w-[1px] h-16 bg-gradient-to-b from-transparent via-zinc-300 to-transparent"></div>
-    </div>
-  </section>
-
-   <!-- Projects -->
+  <!-- Projects -->
   <section id="projects" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
@@ -127,12 +92,12 @@
 
       <div class="grid md:grid-cols-2 gap-8">
 
-        <!-- Главный проект - SydorovClub -->
+        <!-- SydorovClub -->
         <div class="bg-white rounded-3xl overflow-hidden border border-zinc-200 hover:border-amber-300 transition-all group shadow-sm">
           <div class="aspect-video bg-zinc-100 relative">
-           <img src="./images/barbershop.jpg" 
-     alt="SydorovClub" 
-     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <img src="./images/barbershop.jpg" 
+                 alt="SydorovClub" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <div class="absolute top-4 right-4 bg-black/80 text-white px-4 py-1 rounded-full text-sm">
               Барбершоп
             </div>
@@ -159,7 +124,7 @@
           </div>
         </div>
 
-        <!-- Плейсхолдер для следующего проекта -->
+        <!-- Заглушка для следующего проекта -->
         <div class="bg-white rounded-3xl overflow-hidden border border-dashed border-zinc-300 flex flex-col items-center justify-center py-20 text-center hover:border-zinc-400 transition-all group">
           <div class="w-16 h-16 bg-zinc-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
             <span class="text-3xl">🚀</span>
@@ -171,7 +136,8 @@
       </div>
     </div>
   </section>
-   <!-- About Me -->
+
+  <!-- About -->
   <section id="about" class="py-24 bg-white">
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="heading text-5xl font-bold text-center mb-16">Обо мне</h2>
@@ -197,7 +163,6 @@
         </p>
       </div>
 
-      <!-- Ключевые навыки -->
       <div class="mt-20 max-w-3xl mx-auto">
         <h3 class="text-2xl font-semibold text-center mb-10">Что я использую</h3>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -224,7 +189,7 @@
     </div>
   </section>
 
-     <!-- Contacts -->
+  <!-- Contacts -->
   <section id="contacts" class="py-24 bg-zinc-50">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h2 class="heading text-5xl font-bold mb-6 text-zinc-900">Давай работать вместе</h2>
@@ -233,14 +198,11 @@
       </p>
 
       <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-        
-        <!-- Telegram -->
         <a href="https://t.me/artandrew1" target="_blank"
            class="group flex-1 max-w-xs mx-auto flex items-center justify-center gap-3 bg-white border border-zinc-200 hover:border-amber-400 px-10 py-6 rounded-3xl text-lg font-medium transition-all">
           Telegram
         </a>
         
-        <!-- GitHub -->
         <a href="https://github.com/zakrouokno" target="_blank"
            class="group flex-1 max-w-xs mx-auto flex items-center justify-center gap-3 bg-white border border-zinc-200 hover:border-amber-400 px-10 py-6 rounded-3xl text-lg font-medium transition-all">
           GitHub
@@ -249,7 +211,7 @@
 
       <div class="text-sm text-zinc-500">
         Или напишите мне на почту:<br>
-        <a href="mailto:твой@email.com" class="text-amber-600 hover:underline font-medium">
+        <a href="mailto:linchevskiy12@gmail.com" class="text-amber-600 hover:underline font-medium">
           linchevskiy12@gmail.com
         </a>
       </div>
@@ -259,5 +221,6 @@
       </div>
     </div>
   </section>
+
 </body>
 </html>
