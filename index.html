@@ -1,67 +1,271 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Андрей — UI/UX Дизайнер</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Андрей Сидоров | Front-end Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+   <style>
+    body { 
+      font-family: 'Inter', system-ui, sans-serif; 
+    }
+    .heading { 
+      font-family: 'Playfair Display', serif; 
+    }
+
+    /* ====================== МОБИЛЬНЫЕ УЛУЧШЕНИЯ ====================== */
+    @media (max-width: 768px) {
+      .heading {
+        font-size: 2.8rem !important;
+        line-height: 1.1;
+      }
+      
+      h1 {
+        font-size: 2.75rem !important;
+      }
+
+      section {
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
+      }
+
+      .text-3xl {
+        font-size: 1.75rem !important;
+      }
+
+      .text-xl {
+        font-size: 1.15rem !important;
+      }
+
+      /* Улучшение кнопок на мобильных */
+      a {
+        padding: 1rem 1.5rem !important;
+        font-size: 1.05rem !important;
+      }
+
+      /* Навбар на мобильных */
+      nav {
+        padding: 1rem 1.25rem !important;
+      }
+    }
+  </style>
 </head>
-<body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo-link">
-                <img src="logo.svg" alt="S-Web Design" class="logo-img">
-            </a>
-            <div class="nav-links">
-                <a href="#about">Обо мне</a>
-                <a href="#skills">Навыки</a>
-                <a href="#contact">Контакт</a>
-            </div>
-        </div>
-    </nav>
+<body class="bg-zinc-50 text-zinc-900">
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Привет, я Андрей</h1>
-            <p class="subtitle">Создаю современные интерфейсы, которые решают задачи бизнеса.</p>
-            <a href="#skills" class="cta-button">Посмотреть навыки</a>
-        </div>
-    </header>
+   <!-- Навбар -->
+  <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-zinc-100">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 bg-gradient-to-br from-amber-400 to-yellow-500 text-white font-bold text-2xl flex items-center justify-center rounded-2xl">AS</div>
+        <span class="heading text-xl font-semibold tracking-tight">Андрей Сидоров</span>
+      </div>
 
-    <main>
-        <section id="about" class="about">
-            <h2>Обо мне</h2>
-            <p>Я начинающий UI/UX дизайнер с навыками фронтенд-разработки. Моя цель — соединить эстетику дизайна с чистотой кода. Работаю в Figma и верстаю на HTML & CSS.</p>
-        </section>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#projects" class="hover:text-amber-600 transition-colors">Проекты</a>
+        <a href="#about" class="hover:text-amber-600 transition-colors">Обо мне</a>
+        <a href="#contacts" class="hover:text-amber-600 transition-colors">Контакты</a>
+      </div>
 
-        <section id="skills" class="skills">
-            <h2>Что я изучаю</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>🎨 Figma</h3>
-                    <p>Проектирование интерфейсов, прототипы и компоненты.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>💻 Web Dev</h3>
-                    <p>Верстка HTML5/CSS3, Flexbox и адаптивность.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>📱 UX Research</h3>
-                    <p>Анализ путей пользователя и логика интерфейсов.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+      <a href="#contacts" 
+         class="bg-zinc-900 hover:bg-black text-white font-medium px-6 py-3 rounded-2xl text-sm transition-all">
+        Связаться
+      </a>
+    </div>
+  </nav>
 
-    <footer id="contact">
-        <h2>Свяжитесь со мной</h2>
-        <p class="footer-text">Готов к сотрудничеству в учебных или первых коммерческих проектах.</p>
+   <!-- Hero - улучшенная версия -->
+  <section class="min-h-screen flex items-center justify-center pt-20 bg-zinc-50 relative overflow-hidden">
+    <!-- Лёгкий декоративный градиент -->
+    <div class="absolute inset-0 bg-gradient-to-br from-amber-100/30 via-transparent to-transparent"></div>
+
+    <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+      <!-- Маленький привет -->
+      <div class="inline-flex items-center gap-2 bg-white shadow-sm border border-zinc-100 rounded-full px-6 py-2 mb-8">
+        <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+        <span class="text-sm font-medium text-zinc-600">Открыт к новым проектам</span>
+      </div>
+
+      <h1 class="heading text-6xl md:text-7xl lg:text-8xl font-bold leading-none mb-6 tracking-tighter text-zinc-900">
+        Андрей Сидоров
+      </h1>
+      
+      <p class="text-3xl md:text-4xl text-amber-600 mb-8 font-light">
+        Front-end Developer
+      </p>
+
+      <p class="text-xl text-zinc-600 max-w-2xl mx-auto mb-12 leading-relaxed">
+        Создаю чистые, быстрые и красивые веб-сайты.<br>
+        От концепции до готового продукта — с душой и вниманием к мелочам.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+        <a href="#projects" 
+           class="bg-zinc-900 hover:bg-black text-white font-semibold px-12 py-6 rounded-3xl text-lg transition-all shadow-lg">
+          Посмотреть проекты
+        </a>
         
-        <a href="https://t.me/artandrew1" class="cta-button" target="_blank">Написать в Telegram</a>
+        <a href="#contacts" 
+           class="border-2 border-zinc-300 hover:border-zinc-400 hover:bg-white px-12 py-6 rounded-3xl text-lg transition-all">
+          Написать мне
+        </a>
+      </div>
 
-        <div class="copyright">
-            <p>© 2026 S-Web. Дизайн и разработка: SydorovDesign</p>
+      <!-- Социальные ссылки -->
+      <div class="mt-16 flex justify-center gap-8 text-zinc-400">
+        <a href="https://t.me/artandrew1" target="_blank" class="hover:text-amber-600 transition-colors">Telegram</a>
+        <a href="https://github.com/zakrouokno" target="_blank" class="hover:text-amber-600 transition-colors">GitHub</a>
+      </div>
+    </div>
+
+    <!-- Плавный индикатор прокрутки -->
+    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center">
+      <span class="text-xs tracking-[2px] text-zinc-400 mb-3">ПРОКРУТИТЬ</span>
+      <div class="w-[1px] h-16 bg-gradient-to-b from-transparent via-zinc-300 to-transparent"></div>
+    </div>
+  </section>
+
+   <!-- Projects -->
+  <section id="projects" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="heading text-5xl font-bold mb-4 text-zinc-900">Проекты</h2>
+        <p class="text-zinc-600 text-xl">То, над чем я работал</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Главный проект - SydorovClub -->
+        <div class="bg-white rounded-3xl overflow-hidden border border-zinc-200 hover:border-amber-300 transition-all group shadow-sm">
+          <div class="aspect-video bg-zinc-100 relative">
+            <img src="./images/barbershop.jpg" 
+                 alt="SydorovClub" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-4 right-4 bg-black/80 text-white px-4 py-1 rounded-full text-sm">
+              Барбершоп
+            </div>
+          </div>
+
+          <div class="p-8">
+            <h3 class="heading text-3xl font-bold mb-2">SydorovClub</h3>
+            <p class="text-amber-600 mb-5">Премиальный сайт барбершопа</p>
+            
+            <p class="text-zinc-600 text-[17px] leading-relaxed mb-8">
+              Полноценный одностраничный сайт с тёмным мужским дизайном, анимациями, формой записи и интеграцией с Telegram-ботом.
+            </p>
+
+            <div class="flex gap-3">
+              <a href="https://zakrouokno.github.io/sydorofclub/" target="_blank"
+                 class="flex-1 bg-zinc-900 hover:bg-black text-white py-4 rounded-2xl text-center text-sm font-medium transition-all">
+                Посмотреть сайт
+              </a>
+              <a href="https://github.com/zakrouokno/sydorofclub" target="_blank"
+                 class="flex-1 border border-zinc-300 hover:border-zinc-400 py-4 rounded-2xl text-center text-sm font-medium transition-all">
+                GitHub
+              </a>
+            </div>
+          </div>
         </div>
-    </footer>
+
+        <!-- Плейсхолдер для следующего проекта -->
+        <div class="bg-white rounded-3xl overflow-hidden border border-dashed border-zinc-300 flex flex-col items-center justify-center py-20 text-center hover:border-zinc-400 transition-all group">
+          <div class="w-16 h-16 bg-zinc-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <span class="text-3xl">🚀</span>
+          </div>
+          <p class="text-zinc-400 text-lg font-medium">Следующий проект</p>
+          <p class="text-zinc-500 text-sm mt-2">Скоро здесь появится что-то новое</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+   <!-- About Me -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="heading text-5xl font-bold text-center mb-16">Обо мне</h2>
+      
+      <div class="max-w-3xl mx-auto space-y-10 text-lg text-zinc-600 leading-relaxed">
+        <p>
+          Привет! Меня зовут Андрей Сидоров. Я — начинающий Front-end разработчик из Белой Церкви.
+        </p>
+        
+        <p>
+          Мне нравится создавать современные, удобные и визуально приятные веб-сайты. 
+          Я уделяю внимание не только тому, как сайт выглядит, но и тому, насколько комфортно им пользоваться.
+        </p>
+        
+        <p>
+          Мой первый серьёзный проект — <span class="font-medium text-amber-600">SydorovClub</span>. 
+          Я полностью отвечал за дизайн, вёрстку, анимации и интеграцию с Telegram-ботом.
+        </p>
+        
+        <p>
+          Сейчас активно развиваюсь в Tailwind CSS, JavaScript и Responsive Design. 
+          Ищу интересные проекты, где смогу применить свои навыки и продолжить расти как специалист.
+        </p>
+      </div>
+
+      <!-- Ключевые навыки -->
+      <div class="mt-20 max-w-3xl mx-auto">
+        <h3 class="text-2xl font-semibold text-center mb-10">Что я использую</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="bg-white border border-zinc-100 rounded-2xl p-6 text-center hover:border-amber-200 transition-colors">
+            <p class="font-medium">Tailwind CSS</p>
+          </div>
+          <div class="bg-white border border-zinc-100 rounded-2xl p-6 text-center hover:border-amber-200 transition-colors">
+            <p class="font-medium">JavaScript</p>
+          </div>
+          <div class="bg-white border border-zinc-100 rounded-2xl p-6 text-center hover:border-amber-200 transition-colors">
+            <p class="font-medium">HTML5 + CSS3</p>
+          </div>
+          <div class="bg-white border border-zinc-100 rounded-2xl p-6 text-center hover:border-amber-200 transition-colors">
+            <p class="font-medium">Анимации</p>
+          </div>
+          <div class="bg-white border border-zinc-100 rounded-2xl p-6 text-center hover:border-amber-200 transition-colors">
+            <p class="font-medium">Responsive Design</p>
+          </div>
+          <div class="bg-white border border-zinc-100 rounded-2xl p-6 text-center hover:border-amber-200 transition-colors">
+            <p class="font-medium">Telegram API</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+     <!-- Contacts -->
+  <section id="contacts" class="py-24 bg-zinc-50">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="heading text-5xl font-bold mb-6 text-zinc-900">Давай работать вместе</h2>
+      <p class="text-xl text-zinc-600 mb-12 max-w-md mx-auto">
+        Открыт к новым проектам, сотрудничеству и интересным задачам
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+        
+        <!-- Telegram -->
+        <a href="https://t.me/artandrew1" target="_blank"
+           class="group flex-1 max-w-xs mx-auto flex items-center justify-center gap-3 bg-white border border-zinc-200 hover:border-amber-400 px-10 py-6 rounded-3xl text-lg font-medium transition-all">
+          Telegram
+        </a>
+        
+        <!-- GitHub -->
+        <a href="https://github.com/zakrouokno" target="_blank"
+           class="group flex-1 max-w-xs mx-auto flex items-center justify-center gap-3 bg-white border border-zinc-200 hover:border-amber-400 px-10 py-6 rounded-3xl text-lg font-medium transition-all">
+          GitHub
+        </a>
+      </div>
+
+      <div class="text-sm text-zinc-500">
+        Или напишите мне на почту:<br>
+        <a href="mailto:твой@email.com" class="text-amber-600 hover:underline font-medium">
+          linchevskiy12@gmail.com
+        </a>
+      </div>
+
+      <div class="mt-20 text-xs text-zinc-400">
+        © 2026 zakrouokno • Сделано с душой
+      </div>
+    </div>
+  </section>
 </body>
 </html>
